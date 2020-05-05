@@ -7,6 +7,10 @@ import { PokemonComponent } from "./pokemon/pokemon.component";
 import { PokemonDetailComponent } from "./pokemon/pokemon-detail.component";
 import { NativeScriptHttpClientModule } from "nativescript-angular/http-client";
 
+import Theme from "@nativescript/theme";
+
+Theme.setMode(Theme.Dark);
+
 @NgModule({
     bootstrap: [
         AppComponent

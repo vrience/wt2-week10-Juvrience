@@ -7,9 +7,14 @@ import { PokemonService } from "./pokemon.service";
     templateUrl: "./pokemon.component.html"
 })
 export class PokemonComponent implements OnInit {
+    pokemons;
 
     constructor(private ps: PokemonService) { }
 
     ngOnInit(): void {
+        this.ps.getPokemon().subscribe((response) => {
+                this.pokemons = response.results;
+                // console.log(this.pokemons);
+            });
     }
 }

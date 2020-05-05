@@ -1,12 +1,11 @@
-
-<ActionBar title="My App">
+<ActionBar title="Pokedex - Juvrience">
 </ActionBar>
 
 <GridLayout>
-    <ListView [items]="">
-        <ng-template let-item="item">
+    <ListView [items]="pokemons">
+        <ng-template let-pokemon="item">
             <StackLayout>
-                <Label [nsRouterLink]="['/item', item.id]" [text]="item.name"></Label>
+                <Label [nsRouterLink]="['/pokemon', pokemon.name]" [text]="pokemon.name"></Label>
             </StackLayout>
         </ng-template>
     </ListView>

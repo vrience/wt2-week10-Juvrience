@@ -8,12 +8,17 @@ import { PokemonService } from "./pokemon.service";
     templateUrl: "./pokemon-detail.component.html"
 })
 export class PokemonDetailComponent implements OnInit { 
+    name;
+    pokemon;
 
-    constructor(
-        private route: ActivatedRoute
-    ) { }
+    constructor(private route: ActivatedRoute, private ps: PokemonService) { }
 
     ngOnInit(): void {
-        const id = +this.route.snapshot.params.id;
+        this.name = this.route.snapshot.params.name;
+        this.ps.getPokemon(this.name).subscribe(
+            response => {
+                this.pokemon = response;
+            }
+        )
     }
 }
