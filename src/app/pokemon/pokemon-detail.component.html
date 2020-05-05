@@ -1,2 +1,16 @@
 <ActionBar [title]="'Details of ' + name"></ActionBar>
 
+<StackLayout rows="auto, auto, *" columns="*, *">
+    <Label text="Sprites" row="0" col="0" colSpan="2"></Label>
+
+    <Image [src]="pokemon.sprites.front_default" row="1" col="0"></Image>
+    <Image [src]="pokemon.sprites.front_default" row="1" col="1"></Image>
+
+    <GridLayout rows="auto, auto" columns="*, *" row="2" col="0" colSpan="2">
+        <Label text="0, 0" row="0" col="0"></Label>
+        <Label text="0, 1" row="0" col="1"></Label>
+        <Label text="0, 0" row="0" col="0"></Label>
+        <Label text="0, 1" row="0" col="1"></Label>
+    </GridLayout>
+</StackLayout>
+
