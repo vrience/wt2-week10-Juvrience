@@ -2,14 +2,14 @@
 
 <GridLayout rows="auto, auto, auto, *" columns="*, *" *ngIf="pokemon">
 
-    <Label [text]="name" class="h1" row="0" col="0" colSpan="2"></Label>
+    <Label [text]="name" class="h1 p-l-20" row="0" col="0" colSpan="2"></Label>
     <Image [src]="pokemon.sprites.front_default" row="1" col="0" backgroundColor="white" ></Image>
     <Image [src]="pokemon.sprites.back_default" row="1" col="1" backgroundColor="lightgray"></Image>
 
-    <Label text="Stats" class="h1" row="2" col="0" colSpan="2"></Label>
+    <Label text="Stats" class="h1 p-l-20" row="2" col="0" colSpan="2"></Label>
 
 
-    <GridLayout rows="auto, auto, auto, auto, auto, auto, auto" columns="*, *" row="3" col="0" colSpan="2" backgroundColor="darkslategray">
+    <GridLayout rows="auto, auto, auto, auto, auto, auto, auto" columns="*, *" row="3" col="0" colSpan="2" backgroundColor="darkslategray" class="p-l-20">
         <Label text="Pokemon Name" class="font-weight-bold" row="0" col="0"></Label>
         <Label [text]="pokemon.name" class="text-uppercase" row="0" col="1"></Label>
 
